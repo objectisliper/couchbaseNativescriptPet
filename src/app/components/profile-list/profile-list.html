@@ -1,1 +1,12 @@
-<label class="label"></label>
+<ActionBar title="{N} Angular">
+    <ActionItem text="Create" (tap)="create()" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="profiles" class="list-group">
+        <ng-template let-item="item">
+            <StackLayout>
+                <Label [text]="item.firstname + ' ' + item.lastname" class="list-group-item"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

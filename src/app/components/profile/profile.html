@@ -1,16 +1,24 @@
+<ActionBar title="{N} Profile">
+    <NavigationButton text="Back" ios.position="left"></NavigationButton>
+    <ActionItem text="Save" (tap)="save()" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout rows="*, *" cols="*">
+    <Image [src]="profile.photo" (tap)="showModal(true)" width="150" height="150" class="img-rounded" row="0"
+           col="0"></Image>
+    <StackLayout class="form" row="1" col="0">
+        <StackLayout class="input-field">
+            <Label text="First Name" class="label"></Label>
+            <TextField [(ngModel)]="profile.firstname" class="input input-border"></TextField>
+        </StackLayout>
+        <StackLayout class="input-field">
+            <Label text="Last Name" class="label"></Label>
+            <TextField [(ngModel)]="profile.lastname" class="input input-border"></TextField>
+        </StackLayout>
+        <StackLayout class="input-field">
+            <Button text="Save" (tap)="save()" class="btn btn-primary w-full"></Button>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>
 
-
-
-
-
-<label class="label"></label>
-
-
-
-<label class="label"></label>
-
-
-
-<button class="btn btn-primary w-full"></button>
 
 
