@@ -4,11 +4,12 @@ import { Routes } from "@angular/router";
 
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
+import {ProfileListComponent} from "~/app/components/profile-list/profile-list";
+import {ProfileComponent} from "~/app/components/profile/profile";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent }
+    { path: "", component: ProfileListComponent },
+    { path: "profile", component: ProfileComponent }
 ];
 
 @NgModule({
